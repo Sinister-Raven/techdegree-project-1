@@ -1,22 +1,25 @@
-// Represent each player as a dictionary collection with String Keys and corresponding values
-let joeSmith: [String: String] = ["name": "Joe Smith", "height": "42.0", "isExperienced": "true", "guardians": "Jim and Jan Smith"]
-let jillTanner: [String: String] = ["name": "Jill Tanner", "height": "36.0", "isExperienced": "true", "guardians": "Clara Tanner"]
-let billBon: [String: String] = ["name": "Bill Bon", "height": "43.0", "isExperienced": "true", "guardians": "Sara and Jenny Bon"]
-let evaGordon: [String: String] = ["name": "Eva Gordon", "height": "45.0", "isExperienced": "false", "guardians": "Wendy and Mike Gordon"]
-let mattGill: [String: String] = ["name": "Matt Gill", "height": "40.0", "isExperienced": "false", "guardians": "Charles and Sylvia Gill"]
-let kimmyStein: [String: String] = ["name": "Kimmy Stein", "height": "41.0", "isExperienced": "false", "guardians": "Bill and Hilary Stein"]
-let sammyAdams: [String: String] = ["name": "Sammy Adams", "height": "45.0", "isExperienced": "false", "guardians": "Jeff Adams"]
-let karlSaygan: [String: String] = ["name": "Karl Saygan", "height": "42.0", "isExperienced": "true", "guardians": "Heather Bledsoe"]
-let suzaneGreenberg: [String: String] = ["name": "Suzane Greenberg", "height": "44.0", "isExperienced": "true", "guardians": "Henrietta Dumas"]
-let salDali: [String: String] = ["name": "Sal Dali", "height": "41.0", "isExperienced": "false", "guardians": "Gala Dali"]
-let joeKavalier: [String: String] = ["name": "Joe Kavalier", "height": "39.0", "isExperienced": "false", "guardians": "Sam and Elaine Kavalier"]
-let benFinkelstein: [String: String] = ["name": "Ben Finkelstein", "height": "44.0", "isExperienced": "false", "guardians": "Aaron and Jill Finkelstein"]
-let diegoSoto: [String: String] = ["name": "Diego Soto", "height": "41.0", "isExperienced": "false", "guardians": "Robin and Sariko Soto"]
-let chloeAlaska: [String: String] = ["name": "Chloe Alaska", "height": "47.0", "isExperienced": "false", "guardians": "David and Jamie Alaska"]
-let arnoldWillis: [String: String] = ["name": "Arnold Willis", "height": "43.0", "isExperienced": "false", "guardians": "Claire Willis"]
-let phillipHelm: [String: String] = ["name": "Phillip Helm", "height": "44.0", "isExperienced": "false", "guardians": "Thomas Helm and Eva Jones"]
-let lesClay: [String: String] = ["name": "Les Clay", "height": "42.0", "isExperienced": "true", "guardians": "Wynonna Brown"]
-let herschelKrustofski: [String: String] = ["name": "Herschel Krustofski", "height": "45.0", "isExperienced": "false", "guardians": "Hyman and Rachel Krustofski"]
+// Create a single collection called players and add each player to the collection
+var players = [[String:String]]()
+players = [
+    ["name": "Joe Smith", "height": "42.0", "isExperienced": "true", "guardians": "Jim and Jan Smith"],
+    ["name": "Jill Tanner", "height": "36.0", "isExperienced": "true", "guardians": "Clara Tanner"],
+    ["name": "Bill Bon", "height": "43.0", "isExperienced": "true", "guardians": "Sara and Jenny Bon"],
+    ["name": "Eva Gordon", "height": "45.0", "isExperienced": "false", "guardians": "Wendy and Mike Gordon"],
+    ["name": "Matt Gill", "height": "40.0", "isExperienced": "false", "guardians": "Charles and Sylvia Gill"],
+    ["name": "Kimmy Stein", "height": "41.0", "isExperienced": "false", "guardians": "Bill and Hilary Stein"],
+    ["name": "Sammy Adams", "height": "45.0", "isExperienced": "false", "guardians": "Jeff Adams"],
+    ["name": "Karl Saygan", "height": "42.0", "isExperienced": "true", "guardians": "Heather Bledsoe"],
+    ["name": "Suzane Greenberg", "height": "44.0", "isExperienced": "true", "guardians": "Henrietta Dumas"],
+    ["name": "Sal Dali", "height": "41.0", "isExperienced": "false", "guardians": "Gala Dali"],
+    ["name": "Joe Kavalier", "height": "39.0", "isExperienced": "false", "guardians": "Sam and Elaine Kavalier"],
+    ["name": "Ben Finkelstein", "height": "44.0", "isExperienced": "false", "guardians": "Aaron and Jill Finkelstein"],
+    ["name": "Diego Soto", "height": "41.0", "isExperienced": "false", "guardians": "Robin and Sariko Soto"],
+    ["name": "Chloe Alaska", "height": "47.0", "isExperienced": "false", "guardians": "David and Jamie Alaska"],
+    ["name": "Arnold Willis", "height": "43.0", "isExperienced": "false", "guardians": "Claire Willis"],
+    ["name": "Phillip Helm", "height": "44.0", "isExperienced": "false", "guardians": "Thomas Helm and Eva Jones"],
+    ["name": "Les Clay", "height": "42.0", "isExperienced": "true", "guardians": "Wynonna Brown"],
+    ["name": "Herschel Krustofski", "height": "45.0", "isExperienced": "false", "guardians": "Hyman and Rachel Krustofski"]
+]
 
 var experiencedPlayers: [[String: String]] = [] //Dictionary to store experienced player details
 var inexperiencedPlayers: [[String: String]] = [] // Dictionary to store inexperienced player details
@@ -25,13 +28,6 @@ var inexperiencedPlayers: [[String: String]] = [] // Dictionary to store inexper
 var teamDragons: [[String: String]] = []
 var teamSharks: [[String: String]] = []
 var teamRaptors: [[String: String]] = []
-
-
-
-// Create a single collection called players and add each player to the collection
-var players = [[String:String]]()
-players = [joeSmith,jillTanner,billBon,evaGordon,mattGill,kimmyStein,sammyAdams,karlSaygan,suzaneGreenberg,salDali,joeKavalier,benFinkelstein,diegoSoto,chloeAlaska,arnoldWillis,phillipHelm,lesClay,herschelKrustofski]
-
 
 // Split experienced / inexperienced team members
 for player in players {
